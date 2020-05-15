@@ -1,0 +1,217 @@
+/* General
+=================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #2a2a2a;
+  color: #8a8a8a;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  text-rendering: optimizeLegibility;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.main {
+  background-color: #2a2a2a;
+  color: #8a8a8a;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.title {
+  color: #cacaca;
+  margin-bottom: 16px;
+}
+
+h5 {
+  margin-bottom: 3%;
+}
+
+.about-page,
+.portfolio-page {
+  height: 100vh;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* About page
+=================================================================== */
+
+.about-page {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-a {
+  background-color: dodgerblue;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 3%;
+  transition: 400ms;
+}
+.my-a:hover {
+  opacity: 0.7;
+  transition: 400ms;
+}
+
+.social-media {
+  margin-top: 10%;
+  display: flex;
+  width: 100%;
+  max-width: 286px;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.social-media li {
+
+  background-size: cover;
+  cursor: pointer;
+  padding: 25px;
+  width: 60px;
+  height: 60px;
+
+}
+
+.linkedIn {
+  background-image: url('./images/linkedin.png');
+}
+.github {
+  background-image: url('./images/git.png');
+}
+.facebook {
+  background-image: url('./images/facebook.png');
+}
+
+.gmail {
+  background-image: url('./images/gmail.png');
+ 
+}
+
+
+/* Portfolio page
+=================================================================== */
+
+
+
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project-item {
+  flex-basis: 340px;
+  margin: 2%;
+}
+
+
+.bg-black {
+  background-size: cover;
+  display: block;
+  position: relative;
+  /* padding-bottom: 67%; */
+  height: 220px;
+}
+
+.shopping-image {
+  background-image: url('./images/shopping_online.jpg');
+}
+
+.holidays-image {
+  background-image: url('./images/vacation.jpg');
+}
+
+.crypto-image {
+  background-image: url('./images/crypto_currency.jpg');
+}
+
+.tasks-image {
+  background-image: url('./images/sticky_notes.jpg');
+}
+
+.quiz-image {
+  background-image: url('./images/quiz.jpg');
+}
+
+.bg-black::after {
+  content: "";
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.bg-black:hover .btn-project {
+  border-color: white;
+}
+
+.bg-black:hover::after {
+  opacity: 0.2;
+
+}
+
+.btn-project {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  border: 4px solid transparent;
+  padding: 16px 32px 14px;
+  transition: 400ms;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.btn-project::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  background-color: #ffffff;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+@media screen and (max-width: 500px) {
+    .project-item {
+        margin: 4%;
+  }
+}
+
+/* 
+.projects-container {    display: grid;    grid-template-columns: 1fr 1fr;    grid-gap: 20px;} */
