@@ -90,13 +90,11 @@ h5 {
 }
 
 .social-media li {
-
   background-size: cover;
   cursor: pointer;
   padding: 25px;
   width: 60px;
   height: 60px;
-
 }
 
 .linkedIn {
@@ -111,14 +109,11 @@ h5 {
 
 .gmail {
   background-image: url('./images/gmail.png');
- 
 }
 
 
 /* Portfolio page
 =================================================================== */
-
-
 
 
 .projects-container {
@@ -179,7 +174,6 @@ h5 {
 
 .bg-black:hover::after {
   opacity: 0.2;
-
 }
 
 .btn-project {
