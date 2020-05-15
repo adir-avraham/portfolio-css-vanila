@@ -105,6 +105,7 @@ h5 {
 }
 .facebook {
   background-image: url('./images/facebook.png');
+  background-attachment: initial;
 }
 
 .gmail {
