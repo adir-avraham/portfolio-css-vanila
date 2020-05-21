@@ -1,6 +1,7 @@
 /* General
 =================================================== */
 
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +13,11 @@ html {
   color: #8a8a8a;
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   text-rendering: optimizeLegibility;
   line-height: 2rem;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 .main {
@@ -35,25 +37,27 @@ html {
   align-items: center;
 }
 
-.title {
+.title-color {
   color: #cacaca;
-  margin-bottom: 16px;
 }
 
-h5 {
-  margin-bottom: 3%;
+.sub-title {
+  font-size: 1.3rem;
 }
 
 .about-page,
-.portfolio-page {
-  height: 100vh;
+.portfolio-page,
+.contact-page {
+  min-height: 100vh;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
 }
 
+
 /* About page
 =================================================================== */
+
 
 .about-page {
   display: flex;
@@ -62,54 +66,27 @@ h5 {
   align-items: center;
 }
 
-.my-a {
+.btn-started {
   background-color: dodgerblue;
-  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: linear-gradient(180deg,#f2cf00 0,#f2b200 100%);
+  box-shadow: 0 2px 3px rgba(0,0,0,.5);
+  color: rgba(0,0,0,.6);
   border: none;
-  color: white;
-  padding: 10px 24px;
+  padding: 8px 31px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 0.89rem;
   margin-top: 3%;
-  transition: 400ms;
-}
-.my-a:hover {
-  opacity: 0.7;
-  transition: 400ms;
+  border-radius: 30px;
 }
 
-.social-media {
-  margin-top: 10%;
-  display: flex;
-  width: 100%;
-  max-width: 286px;
-  list-style: none;
-  justify-content: space-evenly;
+.btn-started:hover {
+  background: linear-gradient(180deg,#ffdc0d 0,#ffbf0d 100%);
+  color: rgba(0,0,0,.6);
 }
 
-.social-media li {
-  background-size: cover;
-  cursor: pointer;
-  padding: 25px;
-  width: 60px;
-  height: 60px;
-}
-
-.linkedIn {
-  background-image: url('./images/linkedin.png');
-}
-.github {
-  background-image: url('./images/git.png');
-}
-.facebook {
-  background-image: url('./images/facebook.png');
-  background-attachment: initial;
-}
-
-.gmail {
-  background-image: url('./images/gmail.png');
+.btn-contact {
+  color: #8a8a8a;
 }
 
 
@@ -119,40 +96,36 @@ h5 {
 
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-flow: column;
 }
 
 .project-item {
-  flex-basis: 340px;
+  flex-basis: 400px;
   margin: 2%;
+  border-radius: 8px;
 }
-
 
 .bg-black {
   background-size: cover;
   display: block;
   position: relative;
   /* padding-bottom: 67%; */
-  height: 220px;
+  height: 255px;
+  border-radius: 8px;
 }
 
 .shopping-image {
   background-image: url('./images/shopping_online.jpg');
 }
-
 .holidays-image {
   background-image: url('./images/vacation.jpg');
 }
-
 .crypto-image {
   background-image: url('./images/crypto_currency.jpg');
 }
-
 .tasks-image {
   background-image: url('./images/sticky_notes.jpg');
 }
-
 .quiz-image {
   background-image: url('./images/quiz.jpg');
 }
@@ -167,9 +140,10 @@ h5 {
   width: 100%;
   z-index: 0;
   opacity: 0.5;
+  border-radius: 8px;
 }
 
-.bg-black:hover .btn-project {
+.bg-black:hover .btn-project-img {
   border-color: white;
 }
 
@@ -177,7 +151,7 @@ h5 {
   opacity: 0.2;
 }
 
-.btn-project {
+.btn-project-img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -187,11 +161,11 @@ h5 {
   border: 4px solid transparent;
   padding: 16px 32px 14px;
   transition: 400ms;
-  font-size: 0.8rem;
+  font-size: 0.89rem;
   white-space: nowrap;
 }
 
-.btn-project::after {
+.btn-project-img::after {
   content: "";
   position: absolute;
   width: 18px;
@@ -202,11 +176,153 @@ h5 {
   transform: translate(-50%, 100%);
 }
 
+.project-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 8% 0px;
+}
+
+.divider {
+  border-bottom: solid 0.5px #8a8a8a;
+  opacity: 0.3;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.description-section {
+  flex-basis: 400px;
+  margin: 2%;
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  font-size: 0.89rem;
+  line-height: 1.3rem;
+}
+
+.description {
+  font-size: 0.89rem;
+}
+
+.project-actions {
+  display: flex;
+}
+
+.btn-project {
+  padding: 11px 30.5px;
+  color: white;
+  font-size: 0.89rem;
+  text-decoration: none;
+  transition: 300ms;
+  border-radius: 30px;
+}
+
+.btn-project:hover {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.btn-visit {
+  background-color: #5b43d6;
+  border-color: #5b43d6;
+  margin-right: 1rem;
+}
+
+.btn-visit:hover {
+  color: #fff;
+  background-color: #452bc7;
+  border-color: #4129bd;
+}
+
+.btn-github {
+  background-color: #fff;
+  color: #5b43d6;
+}
+
+.btn-github:hover {
+  color: #fff;
+  background-color: #5b43d6;
+  border-color: #5b43d6;
+}
+
+
 @media screen and (max-width: 500px) {
     .project-item {
         margin: 4%;
   }
+  .description-section {
+    text-align: center;
+  }
 }
 
-/* 
-.projects-container {    display: grid;    grid-template-columns: 1fr 1fr;    grid-gap: 20px;} */
+@media screen and (max-width: 885px) {
+  .description-section {
+    text-align: center;
+  }
+  .project-actions {
+    justify-content: center;
+    margin-top: 6%;
+  }
+  .project-section {
+    justify-content: space-evenly;
+  }
+  .description {
+    margin-top: 6%;
+  }
+
+}
+
+
+/* Contact page
+=================================================================== */
+
+
+.contact-page {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-media {
+  margin: 10% 0px;
+  display: flex;
+  width: 100%;
+  max-width: 390px;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.social-media li {
+  background-size: cover;
+  cursor: pointer;
+  padding: 25px;
+  width: 60px;
+  height: 60px;
+  transition: 200ms;
+  opacity: 0.8;
+}
+
+li:hover {
+  opacity: 1;
+  transition: 200ms;
+}
+
+.linkedIn {
+  background-image: url('./icons/linkedin.png');
+}
+.github {
+  background-image: url('./icons/git.png');
+}
+.facebook {
+  background-image: url('./icons/facebook.png');
+  background-attachment: initial;
+}
+.gmail {
+  background-image: url('./icons/gmail.png');
+}
