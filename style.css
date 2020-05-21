@@ -145,6 +145,7 @@ html {
 
 .bg-black:hover .btn-project-img {
   border-color: white;
+  display: block;
 }
 
 .bg-black:hover::after {
@@ -163,6 +164,7 @@ html {
   transition: 400ms;
   font-size: 0.89rem;
   white-space: nowrap;
+  display: none;
 }
 
 .btn-project-img::after {
