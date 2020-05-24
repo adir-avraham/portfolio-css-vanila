@@ -8,21 +8,53 @@
         <link rel="stylesheet" href="./vendors/css/normalize.css">
         <link rel="stylesheet" href="./style.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
-    <body class="main">
+    <body>
         <div class="container">
             <div class="flex-container">   
-                <div class="about-page">
+            <header>
+                <nav>
+                    <div class="navbar">
+                        <div><a href="#about" class="logo"><strong>adir.avraham</strong></a></div> 
+                        <ul class="nav-links">
+                            <li>
+                                <a href="#about">
+                                    <span class="about-link">about</span>
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#portfolio" class="">
+                                    <span>portfolio</span>
+                                    <i class="fas fa-briefcase"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+                                    <span>contact</span>
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>            
+                <section id="about" class="about-page">
                     <h2 class="title-color" style="margin-bottom: 1%;">Hello, my name is Adir Avraham.</h2>
-                    <p>I graduated with honors in full-stack web development.</p>
-                    <p>Check out my repositories, front-end and back-end applications on GitHub.</p>
-                    <p>Feel free to take a look at my latest projects on the web portfolio page.</p>
-                    <p>If you're a business seeking a web presence or are looking to hire, contact me <a class="btn-contact" href="#contact">here</a>.</p>
+                    <p class="about">
+                        I graduated with honors in full-stack web development.
+                        <br>
+                        Check out my repositories, front-end and back-end applications on GitHub.
+                        <br>
+                        Feel free to take a look at my latest projects on the web portfolio page.
+                        <br>
+                        If you're a business seeking a web presence or are looking to hire, contact me <a class="btn-contact" href="#contact">here</a>.
+                    </p>
                     <a class="btn-started" href="#portfolio">Get Started</a>
-                </div>
-                
-                <div id="portfolio" class="portfolio-page">
-                    <h2 class="title-color" style="margin-top: 6%;">Portfolio</h2>
+                </section>
+                <section id="portfolio" class="portfolio-page">
+                    <h2 class="title-color" style="margin-top: 14%;">Portfolio</h2>
                     <div id="projects-list" class="projects-container">
                         <div class="project-section">
                             <div class="project-item">
@@ -129,10 +161,9 @@
                         </div>
                         <span class="divider"></span>
                     </div>
-                </div>
-
-                <div id="contact" class="contact-page">
-                    <h2 class="title-color" style="margin-top: 6%;">Contact</h2>
+                </section>
+                <section id="contact" class="contact-page">
+                    <h2 class="title-color" style="margin-top: 7%;">Contact</h2>
                     <p class="sub-title">
                         Living, learning, & leveling up 
                         <br>
@@ -157,8 +188,7 @@
                         <br>
                         Made with pure HTML & CSS
                     </p>
-                </div>
-
+                </section>
             </div>
         </div>
     </body>

@@ -1,5 +1,7 @@
-/* General
-=================================================== */
+/* 
+===========================================================
+General
+=========================================================== */
 
 
 * {
@@ -18,11 +20,7 @@ html {
   line-height: 2rem;
   text-align: center;
   scroll-behavior: smooth;
-}
-
-.main {
-  background-color: #2a2a2a;
-  color: #8a8a8a;
+  overflow-x: hidden;
 }
 
 .container {
@@ -34,7 +32,7 @@ html {
 .flex-container {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  position: relative;
 }
 
 .title-color {
@@ -55,7 +53,80 @@ html {
 }
 
 
-/* About page
+/* 
+===================================================================
+Header
+=================================================================== */
+
+
+header {
+  background-color: #2a2a2a;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 10%;
+}
+
+.navbar {
+  padding: 3% 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.logo {
+  text-decoration: none;
+  color: #8a8a8a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 390px;
+}
+
+.nav-links li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #8a8a8a;
+  font-weight: 600;
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+  color: #ffcb05;
+}
+
+.nav-links li a i {
+  display: none;
+}
+
+@media only screen and (max-width: 885px) {
+  .navbar {
+    justify-content: center;
+  }
+  .logo {
+    display: none;
+  }
+  .nav-links {
+    border-bottom: solid 1px white;
+    padding: 3%;
+  } 
+  .nav-links li a span {
+    display: none;
+  }
+  .nav-links li a i {
+    display: block;
+  }
+}
+
+
+/* 
+===================================================================
+About page
 =================================================================== */
 
 
@@ -64,6 +135,11 @@ html {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.about {
+  width: 90%;
 }
 
 .btn-started {
@@ -90,7 +166,9 @@ html {
 }
 
 
-/* Portfolio page
+/* 
+===================================================================
+Portfolio page
 =================================================================== */
 
 
@@ -145,6 +223,7 @@ html {
 
 .bg-black:hover .btn-project-img {
   border-color: white;
+  border-radius: 8px;
   display: block;
 }
 
@@ -253,8 +332,8 @@ html {
 }
 
 
-@media screen and (max-width: 500px) {
-    .project-item {
+@media only screen and (max-width: 500px) {
+  .project-item {
         margin: 4%;
   }
   .description-section {
@@ -262,7 +341,7 @@ html {
   }
 }
 
-@media screen and (max-width: 885px) {
+@media only screen and (max-width: 885px) {
   .description-section {
     text-align: center;
   }
@@ -280,7 +359,9 @@ html {
 }
 
 
-/* Contact page
+/* 
+===================================================================
+Contact page
 =================================================================== */
 
 
