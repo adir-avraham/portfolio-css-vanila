@@ -184,7 +184,7 @@ Portfolio page
 }
 
 .bg-black {
-  background-size: cover;
+  background-size: 100% 100%;
   display: block;
   position: relative;
   /* padding-bottom: 67%; */
