@@ -217,7 +217,7 @@ Portfolio page
   height: 100%;
   width: 100%;
   z-index: 0;
-  opacity: 0.5;
+  opacity: 0.3;
   border-radius: 8px;
 }
 
@@ -228,7 +228,7 @@ Portfolio page
 }
 
 .bg-black:hover::after {
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .btn-project-img {
